@@ -11,6 +11,11 @@
 		83D443AF273598F900BFEFFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443AE273598F900BFEFFA /* ContentView.swift */; };
 		83D443B1273598FB00BFEFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D443B0273598FB00BFEFFA /* Assets.xcassets */; };
 		83D443B4273598FB00BFEFFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D443B3273598FB00BFEFFA /* Preview Assets.xcassets */; };
+		83D443BE2735A55300BFEFFA /* Bundle+decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443BD2735A55300BFEFFA /* Bundle+decode.swift */; };
+		83D443C02735A57D00BFEFFA /* GBGridElectricityMix.json in Resources */ = {isa = PBXBuildFile; fileRef = 83D443BF2735A57D00BFEFFA /* GBGridElectricityMix.json */; };
+		83D443C22735A77B00BFEFFA /* ElectricMix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443C12735A77B00BFEFFA /* ElectricMix.swift */; };
+		83D443C42735A93400BFEFFA /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443C32735A93400BFEFFA /* ModelData.swift */; };
+		83D443C72735AC8000BFEFFA /* ElectricMixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443C62735AC8000BFEFFA /* ElectricMixView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		83D443AE273598F900BFEFFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		83D443B0273598FB00BFEFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83D443B3273598FB00BFEFFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83D443BD2735A55300BFEFFA /* Bundle+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+decode.swift"; sourceTree = "<group>"; };
+		83D443BF2735A57D00BFEFFA /* GBGridElectricityMix.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GBGridElectricityMix.json; sourceTree = "<group>"; };
+		83D443C12735A77B00BFEFFA /* ElectricMix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricMix.swift; sourceTree = "<group>"; };
+		83D443C32735A93400BFEFFA /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		83D443C62735AC8000BFEFFA /* ElectricMixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricMixView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,10 @@
 		83D443AB273598F900BFEFFA /* ElectricMix */ = {
 			isa = PBXGroup;
 			children = (
+				83D443C52735AC3000BFEFFA /* Views */,
+				83D443BC2735A52600BFEFFA /* Extensions */,
+				83D443BB2735A4EB00BFEFFA /* Model */,
+				83D443BA2735A4B400BFEFFA /* Supporting Files */,
 				83D443AC273598F900BFEFFA /* ElectricMixApp.swift */,
 				83D443AE273598F900BFEFFA /* ContentView.swift */,
 				83D443B0273598FB00BFEFFA /* Assets.xcassets */,
@@ -65,6 +79,39 @@
 				83D443B3273598FB00BFEFFA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83D443BA2735A4B400BFEFFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83D443BF2735A57D00BFEFFA /* GBGridElectricityMix.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83D443BB2735A4EB00BFEFFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83D443C12735A77B00BFEFFA /* ElectricMix.swift */,
+				83D443C32735A93400BFEFFA /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83D443BC2735A52600BFEFFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83D443BD2735A55300BFEFFA /* Bundle+decode.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		83D443C52735AC3000BFEFFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83D443C62735AC8000BFEFFA /* ElectricMixView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D443B4273598FB00BFEFFA /* Preview Assets.xcassets in Resources */,
+				83D443C02735A57D00BFEFFA /* GBGridElectricityMix.json in Resources */,
 				83D443B1273598FB00BFEFFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D443AF273598F900BFEFFA /* ContentView.swift in Sources */,
+				83D443C22735A77B00BFEFFA /* ElectricMix.swift in Sources */,
+				83D443C42735A93400BFEFFA /* ModelData.swift in Sources */,
+				83D443C72735AC8000BFEFFA /* ElectricMixView.swift in Sources */,
+				83D443BE2735A55300BFEFFA /* Bundle+decode.swift in Sources */,
 				83D443AD273598F900BFEFFA /* ElectricMixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
