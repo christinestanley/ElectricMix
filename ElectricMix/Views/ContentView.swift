@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var pie = Pie()
+    @EnvironmentObject var electricData: ElectricData
     
     @State private var value: Double = 0
     private var index: Int { Int(value) }
-    @State private var isEditing = false
     
     var body: some View {
         VStack {
@@ -23,25 +22,35 @@ struct ContentView: View {
             Text("GB Grid Generation")
                 .accessibilityHeading(.h3)
             Spacer()
-            Text("\(electricMixes[index].date)")
+            Text("\(electricData.mixes[index].date)")
             Spacer()
             ZStack {
-                ForEach(pie.wedges, id: \.self) { wedge in
+                ForEach(electricData.pie.wedges, id: \.self) { wedge in
                     WedgeView(wedge: wedge)
                     }
                 }
             Spacer()
-            ElectricMixView(electricMix: electricMixes[index])
+            ElectricMixView(electricMix: electricData.mixes[index])
             Form {
                 Slider(
-                    value: $value,
-                    in: 0...152,
-                    onEditingChanged: { editing in
-                        isEditing = editing
-                    }
+                    value: Binding(get: {
+                        self.value
+                    }, set: { (newValue) in
+                        self.value = newValue
+                        self.sliderChanged()
+                    }),
+                    in: 0...152
                 )
             }
+            Button("Choose random date") {
+                value = Double.random(in: 0...152)
+                self.sliderChanged()
+            }
         }
+    }
+    
+    func sliderChanged() {
+        electricData.setCurrentMonth(to: index)
     }
 }
 

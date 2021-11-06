@@ -19,7 +19,7 @@ struct ElectricMix: Hashable, Codable {
     var windPerc: Double
     var hydroPerc: Double
     var importsPerc: Double
-    var biomasPerc: Double
+    var biomassPerc: Double
     var otherPerc: Double
     var solarPerc: Double
     var storagePerc: Double
@@ -36,7 +36,7 @@ struct ElectricMix: Hashable, Codable {
         case windPerc = "WIND_perc"
         case hydroPerc = "HYDRO_perc"
         case importsPerc = "IMPORTS_perc"
-        case biomasPerc = "BIOMASS_perc"
+        case biomassPerc = "BIOMASS_perc"
         case otherPerc = "OTHER_perc"
         case solarPerc = "SOLAR_perc"
         case storagePerc = "STORAGE_perc"

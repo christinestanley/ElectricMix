@@ -34,7 +34,7 @@ struct ElectricMixView: View {
             }
             HStack {
                 Text("Biomass")
-                Text("\(electricMix.biomasPerc, specifier: "%.1f")%")
+                Text("\(electricMix.biomassPerc, specifier: "%.1f")%")
             }
             HStack {
                 Text("Imports")
@@ -47,7 +47,8 @@ struct ElectricMixView: View {
 }
 
 struct ElectricMixView_Previews: PreviewProvider {
+    static var mixes = ElectricData().mixes
     static var previews: some View {
-        ElectricMixView(electricMix: electricMixes[0])
+        ElectricMixView(electricMix: mixes[0])
     }
 }

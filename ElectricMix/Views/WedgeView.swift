@@ -17,6 +17,6 @@ struct WedgeView: View {
 
 struct WedgeView_Previews: PreviewProvider {
     static var previews: some View {
-        WedgeView(wedge: Pie.Wedge(width: Double.pi / 2, depth: 1, color: .red, start: Double.pi))
+        WedgeView(wedge: Pie.Wedge(percentage: 50.0, depth: 1, color: .red, start: Double.pi))
     }
 }

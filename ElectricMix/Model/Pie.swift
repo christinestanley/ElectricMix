@@ -9,8 +9,9 @@ import SwiftUI
 
 class Pie: ObservableObject {
     struct Wedge: Equatable, Hashable {
+        var percentage: Double
         // width of wedge as angle in radians
-        var width: Double
+        var width: Double { return percentage * Double.pi * 2 / 100 }
         var depth: Double
         var color: Color
         
@@ -19,14 +20,31 @@ class Pie: ObservableObject {
         var end = 0.0
     }
     
-    var wedges: [Wedge] = [
-        Wedge(width: 0, depth: 0.5, color: .black, start: 0, end: Double.pi * 2 * 0.472 ),
-        Wedge(width: 0, depth: 0.5, color: .teal, start: Double.pi * 2 * 0.472, end: Double.pi * 2 * 0.816 ),
-        Wedge(width: 0, depth: 0.7, color: .gray , start: Double.pi * 2 * 0.816, end: Double.pi * 2 * 0.951 ),
-        Wedge(width: 0, depth: 1.0, color: .green , start: Double.pi * 2 * 0.951, end: Double.pi * 2 * 0.965 ),
-        Wedge(width: 0, depth: 1.0, color: .blue , start: Double.pi * 2 * 0.965, end: Double.pi * 2 * 0.977 ),
-        Wedge(width: 0, depth: 0.5, color: .orange , start: Double.pi * 2 * 0.977, end: Double.pi * 2 * 1.00 ),
-        ]
+    var wedges: [Wedge] = []
+    
+    func addWedge(_ wedge: Wedge) {
+        let lastWedge = wedges.last
+        var newWedge = wedge
+        newWedge.start = lastWedge?.end ?? 0.0
+        newWedge.end = newWedge.start + newWedge.width
+        wedges.append(newWedge)
+    }
+    
+    func updateWedge(index: Int, to percentage: Double) {
+        guard wedges.count > index else { return }
+        
+        wedges[index].percentage = percentage
+        spaceWedges()
+    }
+    
+    func spaceWedges() {
+        var start = 0.0
+        for index in wedges.indices {
+            wedges[index].start = start
+            wedges[index].end = start + wedges[index].width
+            start = wedges[index].end
+        }
+    }
 }
 
 extension Pie.Wedge: Animatable {

@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct ElectricMixApp: App {
+    @StateObject private var electricData = ElectricData()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(electricData)
         }
     }
 }
