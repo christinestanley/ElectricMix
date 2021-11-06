@@ -16,6 +16,9 @@
 		83D443C22735A77B00BFEFFA /* ElectricMix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443C12735A77B00BFEFFA /* ElectricMix.swift */; };
 		83D443C42735A93400BFEFFA /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443C32735A93400BFEFFA /* ModelData.swift */; };
 		83D443C72735AC8000BFEFFA /* ElectricMixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443C62735AC8000BFEFFA /* ElectricMixView.swift */; };
+		83D443C927368C1D00BFEFFA /* WedgeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443C827368C1D00BFEFFA /* WedgeShape.swift */; };
+		83D443CB2736909800BFEFFA /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443CA2736909800BFEFFA /* Pie.swift */; };
+		83D443CD2736959D00BFEFFA /* WedgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443CC2736959D00BFEFFA /* WedgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		83D443C12735A77B00BFEFFA /* ElectricMix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricMix.swift; sourceTree = "<group>"; };
 		83D443C32735A93400BFEFFA /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		83D443C62735AC8000BFEFFA /* ElectricMixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricMixView.swift; sourceTree = "<group>"; };
+		83D443C827368C1D00BFEFFA /* WedgeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WedgeShape.swift; sourceTree = "<group>"; };
+		83D443CA2736909800BFEFFA /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		83D443CC2736959D00BFEFFA /* WedgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WedgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +72,6 @@
 				83D443BB2735A4EB00BFEFFA /* Model */,
 				83D443BA2735A4B400BFEFFA /* Supporting Files */,
 				83D443AC273598F900BFEFFA /* ElectricMixApp.swift */,
-				83D443AE273598F900BFEFFA /* ContentView.swift */,
 				83D443B0273598FB00BFEFFA /* Assets.xcassets */,
 				83D443B2273598FB00BFEFFA /* Preview Content */,
 			);
@@ -94,6 +99,7 @@
 			children = (
 				83D443C12735A77B00BFEFFA /* ElectricMix.swift */,
 				83D443C32735A93400BFEFFA /* ModelData.swift */,
+				83D443CA2736909800BFEFFA /* Pie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,7 +115,10 @@
 		83D443C52735AC3000BFEFFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83D443AE273598F900BFEFFA /* ContentView.swift */,
 				83D443C62735AC8000BFEFFA /* ElectricMixView.swift */,
+				83D443CC2736959D00BFEFFA /* WedgeView.swift */,
+				83D443C827368C1D00BFEFFA /* WedgeShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,10 +195,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D443AF273598F900BFEFFA /* ContentView.swift in Sources */,
+				83D443CB2736909800BFEFFA /* Pie.swift in Sources */,
 				83D443C22735A77B00BFEFFA /* ElectricMix.swift in Sources */,
 				83D443C42735A93400BFEFFA /* ModelData.swift in Sources */,
+				83D443CD2736959D00BFEFFA /* WedgeView.swift in Sources */,
 				83D443C72735AC8000BFEFFA /* ElectricMixView.swift in Sources */,
 				83D443BE2735A55300BFEFFA /* Bundle+decode.swift in Sources */,
+				83D443C927368C1D00BFEFFA /* WedgeShape.swift in Sources */,
 				83D443AD273598F900BFEFFA /* ElectricMixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var pie = Pie()
+    
     @State private var value: Double = 0
     private var index: Int { Int(value) }
     @State private var isEditing = false
@@ -23,8 +25,13 @@ struct ContentView: View {
             Spacer()
             Text("\(electricMixes[index].date)")
             Spacer()
-            ElectricMixView(electricMix: electricMixes[index])
+            ZStack {
+                ForEach(pie.wedges, id: \.self) { wedge in
+                    WedgeView(wedge: wedge)
+                    }
+                }
             Spacer()
+            ElectricMixView(electricMix: electricMixes[index])
             Form {
                 Slider(
                     value: $value,
