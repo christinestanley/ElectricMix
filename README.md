@@ -8,4 +8,4 @@ A dataset was processed to give the monthly average figures and included in the 
 
 My intention was to have an animated timeline but due to time limits I didn't quite get there. This is the first time I've taken part in a coding jam. The code is messy and unfinished, but it was good fun and an interesting challenge.
 
-![alt text](https://github.com/christinestanley/ElectricMix/blob/main/screenshot.png?raw=true)
+![alt text]<img src="https://github.com/christinestanley/ElectricMix/blob/main/screenshot.png?raw=true" width="450">
