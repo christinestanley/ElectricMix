@@ -11,14 +11,13 @@ class ElectricData: ObservableObject {
     
     var mixes = [ElectricMix]()
     @Published var pie = Pie()
-    let colors: [Color] = [.teal, .black, .gray, .green, .blue, .yellow, .red, .orange, .purple]
     let depths: [Double] = [0.5, 0.5, 0.8, 1.0, 1.0, 1.0, 0.8, 0.7, 0.7]
     
     init() {
         mixes = Bundle.main.decode([ElectricMix].self, from: "GBGridElectricityMix.json")
         let initalPercs = getPercs(for: 0)
         for index in initalPercs.indices {
-            let wedge = Pie.Wedge(percentage: initalPercs[index], depth: depths[index], color: colors[index])
+            let wedge = Pie.Wedge(percentage: initalPercs[index], depth: depths[index], color: GenColor.colors[index])
             pie.addWedge(wedge)
         }
     }

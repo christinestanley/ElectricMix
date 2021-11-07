@@ -15,22 +15,32 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Electricity Mix")
+            VStack {
+            Text("Electric Mix")
                 .foregroundColor(.green)
                 .font(.largeTitle)
+                .fontWeight(.semibold)
                 .accessibilityHeading(.h1)
             Text("GB Grid Generation")
+                .font(.title3)
                 .accessibilityHeading(.h3)
-            Spacer()
-            Text("\(electricData.mixes[index].date)")
-            Spacer()
+            Text("2009 to 2021")
+                .font(.caption)
+            }
+            
             ZStack {
                 ForEach(electricData.pie.wedges, id: \.self) { wedge in
                     WedgeView(wedge: wedge)
-                    }
                 }
+            }
+            
             Spacer()
+            
+            // TODO horrible - fix this!
+            Text("\(Month.name[electricData.mixes[index].month]) \(String(electricData.mixes[index].year))")
+            
             ElectricMixView(electricMix: electricData.mixes[index])
+            
             Form {
                 Slider(
                     value: Binding(get: {

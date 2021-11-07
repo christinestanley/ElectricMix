@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831BC758273816CF00A70755 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC757273816CF00A70755 /* Constants.swift */; };
 		83D443AD273598F900BFEFFA /* ElectricMixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443AC273598F900BFEFFA /* ElectricMixApp.swift */; };
 		83D443AF273598F900BFEFFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D443AE273598F900BFEFFA /* ContentView.swift */; };
 		83D443B1273598FB00BFEFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D443B0273598FB00BFEFFA /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		831BC757273816CF00A70755 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		83D443A9273598F900BFEFFA /* ElectricMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D443AC273598F900BFEFFA /* ElectricMixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricMixApp.swift; sourceTree = "<group>"; };
 		83D443AE273598F900BFEFFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				83D443BF2735A57D00BFEFFA /* GBGridElectricityMix.json */,
+				831BC757273816CF00A70755 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				83D443C22735A77B00BFEFFA /* ElectricMix.swift in Sources */,
 				83D443CD2736959D00BFEFFA /* WedgeView.swift in Sources */,
 				83D443D02736DA4C00BFEFFA /* ElectricData.swift in Sources */,
+				831BC758273816CF00A70755 /* Constants.swift in Sources */,
 				83D443C72735AC8000BFEFFA /* ElectricMixView.swift in Sources */,
 				83D443BE2735A55300BFEFFA /* Bundle+decode.swift in Sources */,
 				83D443C927368C1D00BFEFFA /* WedgeShape.swift in Sources */,
