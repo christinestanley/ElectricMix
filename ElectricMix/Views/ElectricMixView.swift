@@ -70,7 +70,7 @@ struct ElectricMixView: View {
                     Circle()
                         .frame(width: circleSize, height: circleSize)
                     Text("Biomass")
-                    Text("\(electricMix.biomassPerc, specifier: "%.1f")%")
+                    Text("\(electricMix.biomassPerc + electricMix.otherPerc, specifier: "%.1f")%")
                 }
                 .foregroundColor(GenColor.colors[6])
                 

@@ -11,7 +11,7 @@ class ElectricData: ObservableObject {
     
     var mixes = [ElectricMix]()
     @Published var pie = Pie()
-    let depths: [Double] = [0.5, 0.5, 0.8, 1.0, 1.0, 1.0, 0.8, 0.7, 0.7]
+    let depths: [Double] = [0.5, 0.5, 0.8, 1.0, 1.0, 1.0, 0.7, 0.5, 0.5]
     
     init() {
         mixes = Bundle.main.decode([ElectricMix].self, from: "GBGridElectricityMix.json")

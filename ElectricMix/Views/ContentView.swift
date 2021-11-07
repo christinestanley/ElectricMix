@@ -10,8 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var electricData: ElectricData
     
-    @State private var value: Double = 0
-    private var index: Int { Int(value) }
+    @State private var sliderValue: Double = 0
+    private var dataRow: Int { Int(sliderValue) }
+    
+    @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var isWalking = false
     
     var body: some View {
         VStack {
@@ -27,37 +30,58 @@ struct ContentView: View {
             Text("2009 to 2021")
                 .font(.caption)
             
-            
             ZStack {
                 ForEach(electricData.pie.wedges, id: \.self) { wedge in
                     WedgeView(wedge: wedge)
                 }
             }
             
-            Text("\(Month.name[electricData.mixes[index].month]) \(String(electricData.mixes[index].year))")
+            Text("\(Month.name[electricData.mixes[dataRow].month]) \(String(electricData.mixes[dataRow].year))")
             
-            ElectricMixView(electricMix: electricData.mixes[index])
+            ElectricMixView(electricMix: electricData.mixes[dataRow])
             
+            HStack(spacing: 10.0) {
                 Slider(
                     value: Binding(get: {
-                        self.value
+                        self.sliderValue
                     }, set: { (newValue) in
-                        self.value = newValue
+                        self.sliderValue = newValue
                         self.sliderChanged()
                     }),
-                    in: 0...152
+                    in: 0...152,
+                    step: 1
                 )
-                .padding(20.0)
-            
-//            Button("Choose random date") {
-//                value = Double.random(in: 0...152)
-//                self.sliderChanged()
-//            }
+                    .accentColor(Color.green)
+                    .padding(20.0)
+                
+                
+                Button(action: {
+                    isWalking.toggle()
+                }) {
+                    HStack {
+                        isWalking ?
+                        Image(systemName: "figure.walk.circle.fill")
+                            .font(.largeTitle)
+                        :
+                        Image(systemName: "figure.walk.circle")
+                            .font(.largeTitle)
+                    }
+                }
+                
+            }
+            .foregroundColor(.green)
+            .padding(.horizontal, 20.0)
         }
-}
+        .onReceive(timer) { _ in
+            if isWalking {
+                sliderValue = Double((dataRow + 1) % 153)
+                self.sliderChanged()
+            }
+        }
+    }
     
     func sliderChanged() {
-        electricData.setCurrentMonth(to: index)
+        electricData.setCurrentMonth(to: dataRow)
     }
 }
 

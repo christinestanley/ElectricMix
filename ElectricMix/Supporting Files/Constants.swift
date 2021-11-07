@@ -26,5 +26,5 @@ enum Month {
 }
 
 enum GenColor {
-    static let colors: [Color] = [.teal, .gray, .brown, .green, .blue, .orange, .red, .purple, .pink]
+    static let colors: [Color] = [.teal, .gray, .brown, .green, .blue, .orange, .red, .purple, .indigo]
 }
