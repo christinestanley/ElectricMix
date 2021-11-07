@@ -12,82 +12,86 @@ struct ElectricMixView: View {
     private let circleSize: CGFloat = 15.0
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 4.0) {
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Gas")
-                Text("\(electricMix.gasPerc, specifier: "%.1f")%")
+        HStack (alignment: .top) {
+            VStack(alignment: .leading, spacing: 4.0) {
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Gas")
+                    Text("\(electricMix.gasPerc, specifier: "%.1f")%")
                     
-            }
-            .foregroundColor(GenColor.colors[0])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading).foregroundColor(GenColor.colors[1])
-                Text("Coal")
-                Text("\(electricMix.coalPerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[0])
+                
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Coal")
+                    Text("\(electricMix.coalPerc, specifier: "%.1f")%")
                     
+                }
+                .foregroundColor(GenColor.colors[1])
+                
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Nuclear")
+                    Text("\(electricMix.nuclearPerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[2])
+                
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Wind")
+                    Text("\(electricMix.windPerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[3])
+                
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Hydro")
+                    Text("\(electricMix.hydroPerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[4])
             }
-            .foregroundColor(GenColor.colors[1])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Nuclear")
-                Text("\(electricMix.nuclearPerc, specifier: "%.1f")%")
+
+            VStack(alignment: .leading, spacing: 4.0) {
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Solar")
+                    Text("\(electricMix.solarPerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[5])
+                
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Biomass")
+                    Text("\(electricMix.biomassPerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[6])
+                
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Imports")
+                    Text("\(electricMix.importsPerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[7])
+                
+                HStack {
+                    Circle()
+                        .frame(width: circleSize, height: circleSize)
+                    Text("Storage")
+                    Text("\(electricMix.storagePerc, specifier: "%.1f")%")
+                }
+                .foregroundColor(GenColor.colors[8])
+                
             }
-            .foregroundColor(GenColor.colors[2])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Wind")
-                Text("\(electricMix.windPerc, specifier: "%.1f")%")
-            }
-            .foregroundColor(GenColor.colors[3])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Hydro")
-                Text("\(electricMix.hydroPerc, specifier: "%.1f")%")
-            }
-            .foregroundColor(GenColor.colors[4])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Solar")
-                Text("\(electricMix.solarPerc, specifier: "%.1f")%")
-            }
-            .foregroundColor(GenColor.colors[5])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Biomass")
-                Text("\(electricMix.biomassPerc, specifier: "%.1f")%")
-            }
-            .foregroundColor(GenColor.colors[6])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Imports")
-                Text("\(electricMix.importsPerc, specifier: "%.1f")%")
-            }
-            .foregroundColor(GenColor.colors[7])
-            
-            HStack {
-                Circle()
-                    .frame(width: circleSize, height: circleSize, alignment: .leading)
-                Text("Storage")
-                Text("\(electricMix.storagePerc, specifier: "%.1f")%")
-            }
-            .foregroundColor(GenColor.colors[8])
         }
-        .frame(width: 250, alignment: .leading)
     }
 }
 

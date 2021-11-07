@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            VStack {
+            
             Text("Electric Mix")
                 .foregroundColor(.green)
                 .font(.largeTitle)
@@ -26,7 +26,7 @@ struct ContentView: View {
                 .accessibilityHeading(.h3)
             Text("2009 to 2021")
                 .font(.caption)
-            }
+            
             
             ZStack {
                 ForEach(electricData.pie.wedges, id: \.self) { wedge in
@@ -34,14 +34,10 @@ struct ContentView: View {
                 }
             }
             
-            Spacer()
-            
-            // TODO horrible - fix this!
             Text("\(Month.name[electricData.mixes[index].month]) \(String(electricData.mixes[index].year))")
             
             ElectricMixView(electricMix: electricData.mixes[index])
             
-            Form {
                 Slider(
                     value: Binding(get: {
                         self.value
@@ -51,13 +47,14 @@ struct ContentView: View {
                     }),
                     in: 0...152
                 )
-            }
-            Button("Choose random date") {
-                value = Double.random(in: 0...152)
-                self.sliderChanged()
-            }
+                .padding(20.0)
+            
+//            Button("Choose random date") {
+//                value = Double.random(in: 0...152)
+//                self.sliderChanged()
+//            }
         }
-    }
+}
     
     func sliderChanged() {
         electricData.setCurrentMonth(to: index)
