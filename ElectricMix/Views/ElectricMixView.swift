@@ -92,6 +92,7 @@ struct ElectricMixView: View {
                 
             }
         }
+        .monospacedDigit()
     }
 }
 
